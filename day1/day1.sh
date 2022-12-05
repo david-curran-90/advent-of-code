@@ -12,7 +12,7 @@ while IFS= read -r l; do
   fi
 done < input.txt
 
-#echo "${elves[*]}" | sort -n 
+#echo "${elves[*]}" | sort -n
 top=$(IFS=$'\n' sort <<<"${elves[*]}" | sort -n -r | head -1)
 
 echo "Top elf has $top calories in their bag"
